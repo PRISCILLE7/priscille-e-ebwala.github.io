@@ -50,8 +50,10 @@ section+section{border-top:1px solid var(--border)}
 
 /* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:6rem 0 4rem}
-.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(99,179,237,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(99,179,237,.035) 1px,transparent 1px);background-size:50px 50px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 30%,transparent 100%)}
-.hero-inner{position:relative;z-index:1;max-width:1140px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:center}
+#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 900px 700px at -8% 38%,rgba(99,179,237,.16) 0%,transparent 55%),radial-gradient(ellipse 700px 700px at 108% 88%,rgba(183,148,244,.11) 0%,transparent 55%),radial-gradient(ellipse 500px 400px at 55% -15%,rgba(66,153,225,.08) 0%,transparent 65%),radial-gradient(ellipse 350px 350px at 90% 10%,rgba(99,179,237,.05) 0%,transparent 60%);animation:hero-ambient 14s ease-in-out infinite alternate;pointer-events:none}
+@keyframes hero-ambient{from{opacity:.75}to{opacity:1}}
+.hero-grid-bg{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(99,179,237,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(99,179,237,.04) 1px,transparent 1px);background-size:50px 50px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 100%)}
+.hero-inner{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:center}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.72rem;color:var(--green);background:rgba(104,211,145,.08);border:1px solid rgba(104,211,145,.2);padding:5px 12px;border-radius:100px;margin-bottom:1.75rem}
 .dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:blink 2s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
