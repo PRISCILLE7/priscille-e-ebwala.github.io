@@ -218,3 +218,6 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
 .ps-block ul{list-style:none;padding:0}
 .ps-block ul li{padding:2px 0 2px 1.2rem;position:relative}
 .ps-block ul li::before{content:'›';position:absolute;left:0;color:var(--accent)}
+.ps-note{background:rgba(99,179,237,.05);border:1px solid rgba(99,179,237,.15);border-left:3px solid var(--accent);border-radius:var(--r);padding:1rem 1.25rem;margin-bottom:2.5rem;display:flex;gap:.75rem;align-items:flex-start}
+.ps-note-icon{font-family:var(--mono);color:var(--accent);font-size:1rem;flex-shrink:0;margin-top:2px}
+.ps-note p{font-size:.86rem;color:var(--text2);line-height:1.65;margin:0}
