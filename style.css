@@ -48,7 +48,8 @@ section+section{border-top:1px solid var(--border)}
 .section-title{font-size:1.5rem;font-weight:600;margin-bottom:3rem;letter-spacing:-.02em}
 .subsection-title{font-size:1.05rem;font-weight:600;margin-bottom:1.25rem;color:var(--text2)}
 
-/* HERO */
+/* HERO — force dark-theme colors locally regardless of global theme */
+#hero{--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--accent:#63b3ed;--bg3:#1c1c2e;--border:rgba(255,255,255,0.12);--border-h:rgba(99,179,237,0.3);color:#e2e8f0}
 #hero{min-height:auto;display:flex;align-items:center;position:relative;overflow:hidden;padding:5rem 0 3.5rem;background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center}
 #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(8,8,15,.93) 0%,rgba(8,8,15,.72) 55%,rgba(8,8,15,.50) 100%);pointer-events:none}
 .hero-grid-bg{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(99,179,237,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(99,179,237,.04) 1px,transparent 1px);background-size:50px 50px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 100%)}
