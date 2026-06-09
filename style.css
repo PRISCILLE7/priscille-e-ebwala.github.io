@@ -193,3 +193,28 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
 
 /* Project category label */
 .proj-cat{font-family:var(--mono);font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+
+/* PROBLEM-SOLVING */
+.ps-intro{font-size:.9rem;color:var(--text2);margin-bottom:3rem;max-width:720px;line-height:1.75}
+.ps-project{margin-bottom:3.5rem}
+.ps-project-header{margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.ps-project-num{font-family:var(--mono);font-size:.7rem;color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
+.ps-project-title{font-size:1.05rem;font-weight:600;margin:.3rem 0 .4rem}
+.ps-project-context{font-size:.75rem;color:var(--text2);font-family:var(--mono);line-height:1.6}
+.ps-challenges{display:flex;flex-direction:column;gap:1.25rem;padding-left:2rem;border-left:1px solid var(--border)}
+.ps-challenge{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);padding:1.5rem;transition:border-color .2s}
+.ps-challenge:hover{border-color:var(--border-h)}
+.ps-challenge-title{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:1.1rem}
+.ps-challenge-num{font-family:var(--mono);font-size:.65rem;color:var(--accent);background:rgba(99,179,237,.1);border:1px solid rgba(99,179,237,.2);padding:2px 7px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:3px}
+.ps-challenge-title h4{font-size:.95rem;font-weight:600;line-height:1.4}
+.ps-block{margin-bottom:.85rem}
+.ps-label{display:inline-block;font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:.1em;padding:2px 7px;border-radius:3px;margin-bottom:.4rem}
+.ps-label-problem{background:rgba(252,129,74,.1);color:#fc814a;border:1px solid rgba(252,129,74,.2)}
+.ps-label-root{background:rgba(183,148,244,.1);color:var(--purple);border:1px solid rgba(183,148,244,.2)}
+.ps-label-resolution{background:rgba(104,211,145,.1);color:var(--green);border:1px solid rgba(104,211,145,.2)}
+.ps-label-outcome{background:rgba(99,179,237,.1);color:var(--accent);border:1px solid rgba(99,179,237,.2)}
+.ps-label-detail{background:rgba(255,255,255,.05);color:var(--text2);border:1px solid var(--border)}
+.ps-block p,.ps-block li{font-size:.86rem;color:var(--text2);line-height:1.65}
+.ps-block ul{list-style:none;padding:0}
+.ps-block ul li{padding:2px 0 2px 1.2rem;position:relative}
+.ps-block ul li::before{content:'›';position:absolute;left:0;color:var(--accent)}
