@@ -15,7 +15,7 @@ function toggleLang() {
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.style.borderBottomColor = window.scrollY > 20
-    ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.06)';
+    ? 'rgba(0,0,0,0.10)' : 'rgba(0,0,0,0.05)';
 });
 
 // ── Mobile menu ──────────────────────────────────
