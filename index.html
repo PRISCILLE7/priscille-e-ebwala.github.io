@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priscille E. Ebwala — AI/ML Engineer & Research Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <span class="nav-logo">PE<span class="accent">.</span></span>
+    <ul class="nav-links">
+      <li><a href="#about" data-en="about" data-fr="à propos">about</a></li>
+      <li><a href="#experience" data-en="experience" data-fr="expérience">experience</a></li>
+      <li><a href="#projects" data-en="projects" data-fr="projets">projects</a></li>
+      <li><a href="#research" data-en="research" data-fr="recherche">research</a></li>
+      <li><a href="#skills" data-en="skills" data-fr="compétences">skills</a></li>
+      <li><a href="#education" data-en="education" data-fr="formation">education</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langBtn" onclick="toggleLang()">FR</button>
+      <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </div>
+  <ul class="nav-mobile" id="nav-mobile">
+    <li><a href="#about" onclick="toggleMenu()" data-en="about" data-fr="à propos">about</a></li>
+    <li><a href="#experience" onclick="toggleMenu()" data-en="experience" data-fr="expérience">experience</a></li>
+    <li><a href="#projects" onclick="toggleMenu()" data-en="projects" data-fr="projets">projects</a></li>
+    <li><a href="#research" onclick="toggleMenu()" data-en="research" data-fr="recherche">research</a></li>
+    <li><a href="#skills" onclick="toggleMenu()" data-en="skills" data-fr="compétences">skills</a></li>
+    <li><a href="#education" onclick="toggleMenu()" data-en="education" data-fr="formation">education</a></li>
+    <li><a href="#contact" onclick="toggleMenu()">contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        <span data-en="available — Paris · Bordeaux · Remote" data-fr="disponible — Paris · Bordeaux · Remote">available — Paris · Bordeaux · Remote</span>
+      </div>
+      <h1 class="hero-name">Priscille<br><span class="accent">E. Ebwala</span></h1>
+      <p class="hero-role"><span class="mono">&gt;_</span> AI/ML Engineer &nbsp;·&nbsp; Research Engineer &nbsp;·&nbsp; MLOps</p>
+      <p class="hero-desc" data-en="I build robust industrial AI systems — from synthetic data generation and applied research to production deployment across 5 countries." data-fr="Je construis des systèmes d'IA industriels robustes — de la génération de données synthétiques et la recherche appliquée jusqu'au déploiement en production dans 5 pays.">I build robust industrial AI systems — from synthetic data generation and applied research to production deployment across 5 countries.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary" data-en="View projects" data-fr="Voir les projets">View projects</a>
+        <a href="#research" class="btn-secondary" data-en="Publications" data-fr="Publications">Publications</a>
+        <a href="mailto:priscille.e.ebwala@gmail.com" class="btn-ghost">Contact</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">5</span><span class="stat-l" data-en="countries deployed" data-fr="pays déployés">countries deployed</span></div>
+        <div class="stat"><span class="stat-n">587k+</span><span class="stat-l" data-en="annotations handled" data-fr="annotations traitées">annotations handled</span></div>
+        <div class="stat"><span class="stat-n">29</span><span class="stat-l" data-en="GitHub repos" data-fr="repos GitHub">GitHub repos</span></div>
+        <div class="stat"><span class="stat-n">2</span><span class="stat-l" data-en="publications" data-fr="publications">publications</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <img src="avatar.jpg" alt="Priscille E. Ebwala" class="avatar-img" onerror="this.style.display='none';document.querySelector('.avatar-initials').style.display='flex'">
+        <div class="avatar-initials">PE</div>
+      </div>
+      <div class="hero-badges">
+        <span class="badge-pill">Computer Vision</span>
+        <span class="badge-pill">MLOps</span>
+        <span class="badge-pill">Self-Supervised</span>
+        <span class="badge-pill">Industrial AI</span>
+        <span class="badge-pill">PhD-ready</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title"><span class="mono accent">01.</span> <span data-en="About" data-fr="À propos">About</span></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-en="AI/ML Engineer specialized in <strong>industrial AI systems</strong>, with a strong background in applied research and production MLOps. My work spans the full spectrum — from synthetic data generation and self-supervised learning on the research side, to deploying and monitoring models in real-world conditions across multiple markets." data-fr="AI/ML Engineer spécialisée dans les <strong>systèmes d'IA industriels</strong>, avec un solide ancrage en recherche appliquée et MLOps de production. Mon travail couvre l'ensemble du spectre — de la génération de données synthétiques et l'apprentissage auto-supervisé côté recherche, jusqu'au déploiement et monitoring de modèles en conditions réelles sur plusieurs marchés.">AI/ML Engineer specialized in <strong>industrial AI systems</strong>, with a strong background in applied research and production MLOps. My work spans the full spectrum — from synthetic data generation and self-supervised learning on the research side, to deploying and monitoring models in real-world conditions across multiple markets.</p>
+        <p data-en="At <strong>FieldPro (Optimetriks)</strong>, I industrialized computer vision models deployed for Nestlé and Coca-Cola across 5 countries in Africa and Asia, handling the full lifecycle: curation of 90,000+ images, YOLO v8/v11 training, migration of 587,000+ annotations, production debugging, and continuous retraining." data-fr="Chez <strong>FieldPro (Optimetriks)</strong>, j'ai industrialisé des modèles de computer vision déployés pour Nestlé et Coca-Cola dans 5 pays d'Afrique et d'Asie, gérant le cycle complet : curation de 90 000+ images, entraînement YOLO v8/v11, migration de 587 000+ annotations, debugging en production, et retraining continu.">At <strong>FieldPro (Optimetriks)</strong>, I industrialized computer vision models deployed for Nestlé and Coca-Cola across 5 countries in Africa and Asia, handling the full lifecycle: curation of 90,000+ images, YOLO v8/v11 training, migration of 587,000+ annotations, production debugging, and continuous retraining.</p>
+        <p data-en="My research at <strong>LGI2A (University of Artois / EDF)</strong> produced a self-supervised framework for magnetic fault diagnosis in electric machines (PMSM), published at IEA/AIE 2026. I am now targeting an <strong>industrial PhD</strong> or a senior ML Engineer role in a high-impact environment." data-fr="Ma recherche au <strong>LGI2A (Université d'Artois / EDF)</strong> a produit un framework self-supervisé pour le diagnostic de défauts magnétiques dans les machines électriques (PMSM), publié à IEA/AIE 2026. Je me positionne aujourd'hui pour une <strong>thèse industrielle</strong> ou un poste de ML Engineer senior dans un environnement à fort impact.">My research at <strong>LGI2A (University of Artois / EDF)</strong> produced a self-supervised framework for magnetic fault diagnosis in electric machines (PMSM), published at IEA/AIE 2026. I am now targeting an <strong>industrial PhD</strong> or a senior ML Engineer role in a high-impact environment.</p>
+        <div class="about-links">
+          <a href="https://github.com/PRISCILLE7" target="_blank" class="chip"><span>⌥</span> GitHub</a>
+          <a href="https://linkedin.com/in/priscille-ebwala" target="_blank" class="chip"><span>in</span> LinkedIn</a>
+          <a href="https://orcid.org/0009-0008-1342-2495" target="_blank" class="chip"><span>○</span> ORCID</a>
+          <a href="mailto:priscille.e.ebwala@gmail.com" class="chip"><span>✉</span> Email</a>
+        </div>
+      </div>
+      <div class="about-sidebar">
+        <div class="info-block">
+          <div class="info-row"><span class="info-label" data-en="Location" data-fr="Localisation">Location</span><span>Hanoi, Vietnam</span></div>
+          <div class="info-row"><span class="info-label" data-en="Availability" data-fr="Disponibilité">Availability</span><span class="green" data-en="Immediately" data-fr="Dès que possible">Immediately</span></div>
+          <div class="info-row"><span class="info-label" data-en="Target" data-fr="Cible">Target</span><span>Paris · Bordeaux · Remote</span></div>
+          <div class="info-row"><span class="info-label" data-en="Languages" data-fr="Langues">Languages</span><span data-en="French · English" data-fr="Français · Anglais">French · English</span></div>
+          <div class="info-row"><span class="info-label" data-en="Open to" data-fr="Ouvert à">Open to</span><span data-en="Industry · PhD · R&D" data-fr="Industrie · PhD · R&D">Industry · PhD · R&D</span></div>
+          <div class="info-row"><span class="info-label">ORCID</span><a href="https://orcid.org/0009-0008-1342-2495" target="_blank" class="accent" style="font-family:monospace;font-size:.72rem">0009-0008-1342-2495</a></div>
+        </div>
+        <div class="info-block" style="margin-top:1rem">
+          <div class="info-row-full"><span class="info-label" data-en="Research interests" data-fr="Intérêts de recherche">Research interests</span></div>
+          <div style="padding:8px 0;display:flex;flex-wrap:wrap;gap:5px">
+            <span class="tag" data-en="Predictive maintenance" data-fr="Maintenance prédictive">Predictive maintenance</span>
+            <span class="tag">Self-supervised learning</span>
+            <span class="tag">Industrial AI</span>
+            <span class="tag">MLOps</span>
+            <span class="tag">Synthetic data</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <h2 class="section-title"><span class="mono accent">02.</span> <span data-en="Experience" data-fr="Expérience">Experience</span></h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-title" data-en="Freelance Data Scientist & ML Engineer" data-fr="Data Scientist & ML Engineer Freelance">Freelance Data Scientist & ML Engineer</h3>
+              <p class="tl-company">FieldPro by Optimetriks &nbsp;·&nbsp; Paris, France / Remote</p>
+            </div>
+            <span class="tl-date" data-en="Oct. 2025 — present · 8 months" data-fr="Oct. 2025 — présent · 8 mois">Oct. 2025 — present · 8 months</span>
+          </div>
+          <p class="tl-intro" data-en="Development and industrialization of AI solutions for field execution, deployed across multiple countries in Africa and Asia for FMCG clients (Nestlé, Coca-Cola)." data-fr="Développement et industrialisation de solutions IA pour l'exécution commerciale terrain, déployées dans plusieurs pays d'Afrique et d'Asie pour des clients FMCG (Nestlé, Coca-Cola).">Development and industrialization of AI solutions for field execution, deployed across multiple countries in Africa and Asia for FMCG clients (Nestlé, Coca-Cola).</p>
+          <ul class="tl-list">
+            <li data-en="Designed, trained, fine-tuned and deployed YOLO v8/v11 models in production across 5 countries (Vietnam, Senegal, Nigeria, Ivory Coast, Cameroon)" data-fr="Conception, entraînement, fine-tuning et déploiement de modèles YOLO v8/v11 en production dans 5 pays (Vietnam, Sénégal, Nigeria, Côte d'Ivoire, Cameroun)">Designed, trained, fine-tuned and deployed YOLO v8/v11 models in production across 5 countries (Vietnam, Senegal, Nigeria, Ivory Coast, Cameroon)</li>
+            <li data-en="Owned the full ML lifecycle end-to-end: data curation, class balancing, training, evaluation, deployment, retraining, monitoring" data-fr="Propriétaire du cycle ML complet : curation de données, class balancing, entraînement, évaluation, déploiement, retraining, monitoring">Owned the full ML lifecycle end-to-end: data curation, class balancing, training, evaluation, deployment, retraining, monitoring</li>
+            <li data-en="Migrated 40,000+ annotated images (Hasty → GCS → Label Studio) with robust pipeline and error recovery; retroactively corrected 587,000+ annotations" data-fr="Migration de 40 000+ images annotées (Hasty → GCS → Label Studio) avec pipeline robuste et reprise sur erreur ; correction rétroactive de 587 000+ annotations">Migrated 40,000+ annotated images (Hasty → GCS → Label Studio) with robust pipeline and error recovery; retroactively corrected 587,000+ annotations</li>
+            <li data-en="Validated annotation quality across 90,000+ labeled images" data-fr="Validation de la qualité d'annotation sur 90 000+ images labelisées">Validated annotation quality across 90,000+ labeled images</li>
+            <li data-en="Built automated data pipelines on GCP/GCS with REST API integration, checkpoint recovery and consistency validation" data-fr="Pipelines de données automatisés sur GCP/GCS avec intégration REST API, reprise sur erreur et validation de cohérence">Built automated data pipelines on GCP/GCS with REST API integration, checkpoint recovery and consistency validation</li>
+            <li data-en="Led structured A/B experiments and offline/online evaluations to drive continuous model improvement" data-fr="A/B tests et évaluations offline/online pour piloter l'amélioration continue des modèles">Led structured A/B experiments and offline/online evaluations to drive continuous model improvement</li>
+            <li data-en="Investigated production incidents (Kubernetes/GKE), coordinated with ML teams for resolution" data-fr="Investigation d'incidents de production (Kubernetes/GKE), coordination avec les équipes ML pour la résolution">Investigated production incidents (Kubernetes/GKE), coordinated with ML teams for resolution</li>
+            <li data-en="Integrated MLflow for experiment tracking, model versioning and deployment lifecycle management" data-fr="Intégration de MLflow pour l'experiment tracking, le versioning de modèles et la gestion du lifecycle">Integrated MLflow for experiment tracking, model versioning and deployment lifecycle management</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">YOLO v8/v11</span>
+            <span class="tag">GCP/GCS</span><span class="tag">Docker</span><span class="tag">Kubernetes</span>
+            <span class="tag">MLflow</span><span class="tag">Label Studio</span><span class="tag">REST API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-title" data-en="R&D Intern — AI-based Fault Diagnosis of Electric Machines" data-fr="Stagiaire R&D — Diagnostic de Machines Électriques par IA">R&D Intern — AI-based Fault Diagnosis of Electric Machines</h3>
+              <p class="tl-company">LGI2A Laboratory · University of Artois & EDF &nbsp;·&nbsp; France</p>
+            </div>
+            <span class="tl-date" data-en="Jun. — Dec. 2025 · 7 months" data-fr="Juin — Déc. 2025 · 7 mois">Jun. — Dec. 2025 · 7 months</span>
+          </div>
+          <p class="tl-intro" data-en="Research project on intelligent predictive maintenance of Permanent Magnet Synchronous Machines (PMSMs) using AI and physics-based simulation." data-fr="Projet de recherche sur la maintenance prédictive intelligente des machines synchrones à aimants permanents (PMSM) par IA et simulation physique.">Research project on intelligent predictive maintenance of Permanent Magnet Synchronous Machines (PMSMs) using AI and physics-based simulation.</p>
+          <ul class="tl-list">
+            <li data-en="Generated a synthetic dataset of electromagnetic simulations (Pyleecan/FEMM) — 50+ motor variants (Tesla Model 3, Toyota Prius) under healthy and faulty conditions" data-fr="Génération d'un dataset synthétique de simulations électromagnétiques (Pyleecan/FEMM) — 50+ variantes de moteurs (Tesla Model 3, Toyota Prius) sous conditions saines et défaillantes">Generated a synthetic dataset of electromagnetic simulations (Pyleecan/FEMM) — 50+ motor variants (Tesla Model 3, Toyota Prius) under healthy and faulty conditions</li>
+            <li data-en="Developed and validated a self-supervised framework (Self2Self+) for magnetic fault denoising and localization" data-fr="Développement et validation d'un framework self-supervisé (Self2Self+) pour le débruitage et la localisation de défauts magnétiques">Developed and validated a self-supervised framework (Self2Self+) for magnetic fault denoising and localization</li>
+            <li data-en="Analyzed time/frequency-domain signals (magnetic flux, torque, field density) to extract discriminative fault signatures" data-fr="Analyse de signaux temporels/fréquentiels (flux magnétique, couple, densité de champ) pour extraire des signatures discriminantes">Analyzed time/frequency-domain signals (magnetic flux, torque, field density) to extract discriminative fault signatures</li>
+            <li data-en="Applied transfer learning to adapt pre-trained models to fault diagnosis with limited real-world data" data-fr="Transfer learning pour adapter des modèles pré-entraînés au diagnostic de défauts avec peu de données réelles">Applied transfer learning to adapt pre-trained models to fault diagnosis with limited real-world data</li>
+            <li data-en="Leveraged HPC infrastructure (SLURM, cluster) to scale electromagnetic batch simulations" data-fr="Infrastructure HPC (SLURM, cluster) pour accélérer les simulations electromagnétiques en batch">Leveraged HPC infrastructure (SLURM, cluster) to scale electromagnetic batch simulations</li>
+            <li><strong data-en="Outcome: paper accepted at IEA/AIE 2026, Kuala Lumpur, Malaysia" data-fr="Résultat : paper accepté à IEA/AIE 2026, Kuala Lumpur, Malaisie">Outcome: paper accepted at IEA/AIE 2026, Kuala Lumpur, Malaysia</strong></li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Pyleecan</span>
+            <span class="tag">FEMM</span><span class="tag">SLURM / HPC</span><span class="tag">Self-Supervised</span>
+            <span class="tag">Transfer Learning</span><span class="tag">Signal Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-title" data-en="Teaching & Research Assistant" data-fr="Assistante d'enseignement & de recherche">Teaching & Research Assistant</h3>
+              <p class="tl-company" data-en="University of Kinshasa (UNIKIN) · DR Congo" data-fr="Université de Kinshasa (UNIKIN) · RD Congo">University of Kinshasa (UNIKIN) · DR Congo</p>
+            </div>
+            <span class="tl-date" data-en="Nov. 2022 — Dec. 2023 · 1 yr 2 mo" data-fr="Nov. 2022 — Déc. 2023 · 1 an 2 mois">Nov. 2022 — Dec. 2023 · 1 yr 2 mo</span>
+          </div>
+          <ul class="tl-list">
+            <li data-en="Supervised practical sessions in Programming Logic, Algorithms, Computer Science and Biometrics" data-fr="Encadrement des TP en Logique de Programmation, Algorithmique, Informatique générale et Biométrie">Supervised practical sessions in Programming Logic, Algorithms, Computer Science and Biometrics</li>
+            <li data-en="Mentored students on final-year projects and research work" data-fr="Mentorat des étudiants sur leurs projets de fin d'année et travaux de recherche">Mentored students on final-year projects and research work</li>
+            <li data-en="Contributed to exam preparation, grading and evaluation" data-fr="Contribution à la préparation, la correction et l'évaluation des examens">Contributed to exam preparation, grading and evaluation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title"><span class="mono accent">03.</span> <span data-en="Projects" data-fr="Projets">Projects</span></h2>
+
+    <div class="proj-cat" data-en="Production & MLOps" data-fr="Production & MLOps">Production & MLOps</div>
+    <div class="projects-grid">
+      <div class="project-card featured">
+        <div class="project-card-top"><span class="project-type">Production · MLOps · Computer Vision</span><span class="project-badge">Industry</span></div>
+        <h3 data-en="Multi-country product detection model industrialization" data-fr="Industrialisation de modèles de détection produits — 5 marchés">Multi-country product detection model industrialization</h3>
+        <p data-en="Deployment and maintenance of YOLO v8/v11 models in production for Nestlé & Coca-Cola. Solved an invisible staging bug: a multi-model workflow was using only the first model's <code>skus.csv</code>, corrupting predictions in the prod WebApp. Analyzed distribution of 90k+ images, identified a 1:14 class imbalance, ran targeted retraining." data-fr="Déploiement et maintenance de modèles YOLO v8/v11 en production pour Nestlé & Coca-Cola. Résolution d'un bug invisible en staging : un workflow multi-modèles utilisait uniquement le <code>skus.csv</code> du premier modèle. Analyse de 90k+ images, ratio 1:14 identifié, retraining ciblé.">Deployment and maintenance of YOLO v8/v11 models in production for Nestlé & Coca-Cola. Solved an invisible staging bug: a multi-model workflow was using only the first model's <code>skus.csv</code>, corrupting predictions in the prod WebApp. Analyzed distribution of 90k+ images, identified a 1:14 class imbalance, ran targeted retraining.</p>
+        <div class="tl-tags"><span class="tag">YOLO v8/v11</span><span class="tag">GCP</span><span class="tag">Docker</span><span class="tag">Python</span><span class="tag">REST API</span></div>
+      </div>
+      <div class="project-card featured">
+        <div class="project-card-top"><span class="project-type">Data Engineering · Pipeline</span><span class="project-badge">Industry</span></div>
+        <h3 data-en="Large-scale annotation pipeline migration: Hasty → GCS → Label Studio" data-fr="Migration de pipeline annoté à grande échelle : Hasty → GCS → Label Studio">Large-scale annotation pipeline migration: Hasty → GCS → Label Studio</h3>
+        <p data-en="Migrated 40,000+ annotated images with retroactive correction of 587,000+ annotations. Robust Python pipeline: auto-retry on 429 errors (2-min backoff), automatic CORS rule correction on GCS bucket, cross-platform validation of image/annotation/label consistency. Zero data loss verified by scripts." data-fr="Migration de 40 000+ images annotées avec correction rétroactive de 587 000+ annotations. Pipeline Python robuste : retry auto sur erreurs 429 (backoff 2 min), correction automatique des règles CORS sur bucket GCS, validation croisée image/annotation/label. Zéro perte vérifiée par scripts.">Migrated 40,000+ annotated images with retroactive correction of 587,000+ annotations. Robust Python pipeline: auto-retry on 429 errors (2-min backoff), automatic CORS rule correction on GCS bucket, cross-platform validation of image/annotation/label consistency. Zero data loss verified by scripts.</p>
+        <div class="tl-tags"><span class="tag">Python</span><span class="tag">GCP/GCS</span><span class="tag">Label Studio</span><span class="tag">REST API</span><span class="tag">Hasty</span></div>
+      </div>
+    </div>
+
+    <div class="proj-cat" style="margin-top:2.5rem" data-en="Computer Vision & Deep Learning" data-fr="Computer Vision & Deep Learning">Computer Vision & Deep Learning</div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Computer Vision · OCR · Deployment</span></div>
+        <h3 data-en="Automatic Congolese license plate recognition" data-fr="Reconnaissance automatique de plaques d'immatriculation congolaises">Automatic Congolese license plate recognition</h3>
+        <p data-en="Automatic detection and recognition using YOLOv8 + EasyOCR + Scikit-learn, deployed as an interactive Streamlit app." data-fr="Détection et reconnaissance automatique via YOLOv8 + EasyOCR + Scikit-learn, déployée en application Streamlit.">Automatic detection and recognition using YOLOv8 + EasyOCR + Scikit-learn, deployed as an interactive Streamlit app.</p>
+        <div class="tl-tags"><span class="tag">YOLOv8</span><span class="tag">EasyOCR</span><span class="tag">OpenCV</span><span class="tag">Streamlit</span></div>
+        <a href="https://github.com/PRISCILLE7/YOLO-License-Recognition" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Computer Vision · Surveillance · Flask</span></div>
+        <h3 data-en="Real-time exam surveillance system" data-fr="Système de surveillance d'examens en temps réel">Real-time exam surveillance system</h3>
+        <p data-en="Real-time detection of suspicious behaviors in an exam room via YOLOv8 + FaceNet, with a Flask web interface." data-fr="Détection de comportements suspects en temps réel dans une salle d'examen via YOLOv8 + FaceNet, avec interface Flask.">Real-time detection of suspicious behaviors in an exam room via YOLOv8 + FaceNet, with a Flask web interface.</p>
+        <div class="tl-tags"><span class="tag">YOLOv8</span><span class="tag">FaceNet</span><span class="tag">Flask</span><span class="tag">Python</span></div>
+        <a href="https://github.com/PRISCILLE7/-exam-surveillance-system" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Computer Vision · CBIR · Multimedia</span></div>
+        <h3 data-en="Content-Based Image Retrieval engine (CBIR)" data-fr="Moteur de recherche d'images par le contenu (CBIR)">Content-Based Image Retrieval engine (CBIR)</h3>
+        <p data-en="Image search system based on visual content — M2 project in multimedia indexing, University of La Rochelle / IFI-VNU." data-fr="Système de recherche d'images par le contenu — projet M2 en indexation de contenu multimédia, Université de La Rochelle / IFI-VNU.">Image search system based on visual content — M2 project in multimedia indexing, University of La Rochelle / IFI-VNU.</p>
+        <div class="tl-tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Indexing</span></div>
+        <a href="https://github.com/PRISCILLE7/Projet-CBIR" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Computer Vision · SIFT · Recognition</span></div>
+        <h3 data-en="Object recognition with SIFT descriptors — COIL-100" data-fr="Reconnaissance d'objets par descripteurs SIFT — COIL-100">Object recognition with SIFT descriptors — COIL-100</h3>
+        <p data-en="Object detection and recognition using SIFT descriptors on the COIL-100 dataset, evaluated with confusion matrix and keypoint matching." data-fr="Détection et reconnaissance d'objets via descripteurs SIFT sur le dataset COIL-100, évaluation par matrice de confusion.">Object detection and recognition using SIFT descriptors on the COIL-100 dataset, evaluated with confusion matrix and keypoint matching.</p>
+        <div class="tl-tags"><span class="tag">SIFT</span><span class="tag">OpenCV</span><span class="tag">Python</span><span class="tag">COIL-100</span></div>
+        <a href="https://github.com/PRISCILLE7/TP-SIFT-ObjectRecognition" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Deep Learning · CNN-LSTM · Time Series</span></div>
+        <h3 data-en="CNN & CNN-LSTM Deep Learning project" data-fr="Projet Deep Learning CNN & CNN-LSTM">CNN & CNN-LSTM Deep Learning project</h3>
+        <p data-en="Implementation and comparison of CNN and CNN-LSTM models for time series classification and analysis." data-fr="Implémentation et comparaison de modèles CNN et CNN-LSTM pour la classification et l'analyse de séries temporelles.">Implementation and comparison of CNN and CNN-LSTM models for time series classification and analysis.</p>
+        <div class="tl-tags"><span class="tag">PyTorch</span><span class="tag">CNN</span><span class="tag">LSTM</span></div>
+        <a href="https://github.com/PRISCILLE7/DeepLearning-CNN-CNNLSTM-Project" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Medical AI · Dermatology</span></div>
+        <h3>SkinAI — <span data-en="Skin lesion abnormality detection" data-fr="Détection de lésions cutanées anormales">Skin lesion abnormality detection</span></h3>
+        <p data-en="Application detecting whether a skin lesion is normal or abnormal from a photo — first-pass AI evaluation (non-medical)." data-fr="Application de détection de lésions cutanées (normale / anormale) à partir d'une photo — première évaluation non médicale par IA.">Application detecting whether a skin lesion is normal or abnormal from a photo — first-pass AI evaluation (non-medical).</p>
+        <div class="tl-tags"><span class="tag">Python</span><span class="tag">Deep Learning</span><span class="tag">Medical AI</span></div>
+        <a href="https://github.com/PRISCILLE7/SkinAI_Project" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="proj-cat" style="margin-top:2.5rem" data-en="NLP & Generative AI" data-fr="NLP & IA Générative">NLP & Generative AI</div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">NLP · LLM · CI/CD · Deployment</span></div>
+        <h3 data-en="Multilingual text summarization app — Hugging Face Spaces" data-fr="App de résumé de texte multilingue — Hugging Face Spaces">Multilingual text summarization app — Hugging Face Spaces</h3>
+        <p data-en="AI-powered multilingual summarization (EN/FR/ES) with length selection, deployed on HF Spaces via GitHub Actions CI/CD pipeline." data-fr="Résumé automatique multilingue (EN/FR/ES) avec sélection de longueur, déployé sur HF Spaces via GitHub Actions CI/CD.">AI-powered multilingual summarization (EN/FR/ES) with length selection, deployed on HF Spaces via GitHub Actions CI/CD pipeline.</p>
+        <div class="tl-tags"><span class="tag">Transformers</span><span class="tag">Gradio</span><span class="tag">GitHub Actions</span><span class="tag">HF Spaces</span></div>
+        <a href="https://github.com/PRISCILLE7/ai-text-summarization-app" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">NLP · LLM · Medical accessibility</span></div>
+        <h3 data-en="Automatic simplification of French medical texts" data-fr="Simplification automatique de textes médicaux français">Automatic simplification of French medical texts</h3>
+        <p data-en="NLP pipeline to automatically simplify French medical terminology using LLMs, improving accessibility for non-expert patients." data-fr="Pipeline NLP pour simplifier automatiquement la terminologie médicale française via LLMs, améliorant l'accessibilité pour des patients non-experts.">NLP pipeline to automatically simplify French medical terminology using LLMs, improving accessibility for non-expert patients.</p>
+        <div class="tl-tags"><span class="tag">GPT-4</span><span class="tag">spaCy-fr</span><span class="tag">NLTK</span><span class="tag">Hugging Face</span></div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">NLP · Bias detection · Sentiment</span></div>
+        <h3 data-en="Bias detection in film reviews" data-fr="Détection de biais dans les critiques de films">Bias detection in film reviews</h3>
+        <p data-en="Analysis and quantification of potential biases in online film reviews — comparing professional critics vs. general audience, detecting systemic patterns." data-fr="Analyse et quantification des biais potentiels dans les évaluations de films en ligne — comparaison critiques professionnels vs. publics.">Analysis and quantification of potential biases in online film reviews — comparing professional critics vs. general audience, detecting systemic patterns.</p>
+        <div class="tl-tags"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Sentiment Analysis</span></div>
+        <a href="https://github.com/PRISCILLE7/Detection_of_Biases_in_Film_Reviews" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">NLP · Information Retrieval</span></div>
+        <h3 data-en="Custom text search engine (Information Retrieval)" data-fr="Moteur de recherche textuel (Information Retrieval)">Custom text search engine (Information Retrieval)</h3>
+        <p data-en="Custom search engine with indexing, vector models and TF-IDF relevance scoring. M2 project IFI / University of La Rochelle." data-fr="Moteur de recherche maison avec indexation, modèles vectoriels et TF-IDF. Projet M2 IFI / Université de La Rochelle.">Custom search engine with indexing, vector models and TF-IDF relevance scoring. M2 project IFI / University of La Rochelle.</p>
+        <div class="tl-tags"><span class="tag">Python</span><span class="tag">TF-IDF</span><span class="tag">IR</span></div>
+        <a href="https://github.com/PRISCILLE7/Information-Retrieval-Search-Engine" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">NLP · Word Embeddings</span></div>
+        <h3 data-en="Word embedding & sentiment analysis" data-fr="Word Embedding & analyse de sentiment">Word embedding & sentiment analysis</h3>
+        <p data-en="Word2Vec with Gensim and NLTK — semantic similarity, analogies and sentence sentiment classification." data-fr="Word2Vec avec Gensim et NLTK — similarité sémantique, analogies et classification de sentiment.">Word2Vec with Gensim and NLTK — semantic similarity, analogies and sentence sentiment classification.</p>
+        <div class="tl-tags"><span class="tag">Gensim</span><span class="tag">NLTK</span><span class="tag">Word2Vec</span></div>
+        <a href="https://github.com/PRISCILLE7/TP-WordEmbedding" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="proj-cat" style="margin-top:2.5rem" data-en="Simulation & Multi-Agent Systems" data-fr="Simulation & Systèmes multi-agents">Simulation & Multi-Agent Systems</div>
+    <div class="projects-grid">
+      <div class="project-card featured">
+        <div class="project-card-top"><span class="project-type">Multi-Agent · Simulation · Publication</span><span class="project-badge">AFIA 2025</span></div>
+        <h3 data-en="Multi-agent simulation for urban waste collection optimization" data-fr="Simulation multi-agents pour l'optimisation de la collecte urbaine des déchets">Multi-agent simulation for urban waste collection optimization</h3>
+        <p data-en="Multi-agent system (GAMA) to model and optimize waste collection operations in an urban environment — reducing travel time and distance. Published in AFIA Bulletin n°129." data-fr="Système multi-agents (GAMA) pour modéliser et optimiser les opérations de collecte dans un environnement urbain. Publié dans le Bulletin AFIA n°129.">Multi-agent system (GAMA) to model and optimize waste collection operations in an urban environment — reducing travel time and distance. Published in AFIA Bulletin n°129.</p>
+        <div class="tl-tags"><span class="tag">GAMA</span><span class="tag">GAML</span><span class="tag">Multi-Agent</span><span class="tag">Optimization</span></div>
+        <a href="https://github.com/PRISCILLE7/simulation_camion_poubelle" target="_blank" class="project-link">GitHub ↗</a>
+        <a href="https://afia.asso.fr/wp-content/uploads/2025/09/129_jui25.pdf" target="_blank" class="project-link" style="margin-left:10px" data-en="Publication ↗" data-fr="Publication ↗">Publication ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Simulation · Unity · Blender</span></div>
+        <h3 data-en="Urban pedestrian simulation in a virtual city" data-fr="Simulation de piétons en environnement urbain virtuel">Urban pedestrian simulation in a virtual city</h3>
+        <p data-en="Pedestrian simulation system in a virtual urban environment, built with Unity and Blender. Behavioral modeling in constrained environments." data-fr="Système de simulation de piétons dans une ville virtuelle, réalisé avec Unity et Blender. Modélisation des comportements en environnement contraint.">Pedestrian simulation system in a virtual urban environment, built with Unity and Blender. Behavioral modeling in constrained environments.</p>
+        <div class="tl-tags"><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">C#</span></div>
+        <a href="https://github.com/PRISCILLE7/unity-urban-pedestrian-simulation" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="proj-cat" style="margin-top:2.5rem" data-en="Classical ML & Data Science" data-fr="ML Classique & Data Science">Classical ML & Data Science</div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">ML · AutoML · Health</span></div>
+        <h3 data-en="BMI classification with AutoGluon" data-fr="Classification BMI par AutoGluon">BMI classification with AutoGluon</h3>
+        <p data-en="Body mass index classification using AutoGluon (AutoML) — automatic model selection and training with TabularPredictor." data-fr="Classification de l'indice de masse corporelle via AutoGluon (AutoML) — sélection et entraînement automatique de modèles.">Body mass index classification using AutoGluon (AutoML) — automatic model selection and training with TabularPredictor.</p>
+        <div class="tl-tags"><span class="tag">AutoGluon</span><span class="tag">AutoML</span><span class="tag">Pandas</span></div>
+        <a href="https://github.com/PRISCILLE7/BMI-AutoGluon-Classifier" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">ML · PCA · Clustering · Health</span></div>
+        <h3 data-en="Sleep disorder prediction" data-fr="Prédiction de troubles du sommeil">Sleep disorder prediction</h3>
+        <p data-en="Academic project combining PCA, MCA, clustering and supervised models (KNN, CART) for sleep disorder prediction." data-fr="Projet académique combinant ACP, ACM, clustering et modèles supervisés (KNN, CART) pour la prédiction de troubles du sommeil.">Academic project combining PCA, MCA, clustering and supervised models (KNN, CART) for sleep disorder prediction.</p>
+        <div class="tl-tags"><span class="tag">PCA</span><span class="tag">Clustering</span><span class="tag">KNN</span><span class="tag">CART</span></div>
+        <a href="https://github.com/PRISCILLE7/sleep-disorder-prediction" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Document AI · Visual spotting</span></div>
+        <h3 data-en="Information spotting in scanned paper documents" data-fr="Information Spotting — documents papier numérisés">Information spotting in scanned paper documents</h3>
+        <p data-en="Visual information retrieval system in scanned paper documents from video capture, using visual feature extraction." data-fr="Système de recherche d'information visuelle dans des documents papier numérisés à partir d'une capture vidéo.">Visual information retrieval system in scanned paper documents from video capture, using visual feature extraction.</p>
+        <div class="tl-tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Document AI</span></div>
+        <a href="https://github.com/PRISCILLE7/Projet-InformationSpotting" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="container">
+    <h2 class="section-title"><span class="mono accent">04.</span> <span data-en="Research & Publications" data-fr="Recherche & Publications">Research & Publications</span></h2>
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <div class="pub-header">
+          <div class="pub-badge conf" data-en="International conference" data-fr="Conférence internationale">International conference</div>
+          <span class="pub-year accent">2026</span>
+        </div>
+        <h3 class="pub-title">Self2Self+-based Self-Supervision for Magnetic Fault Denoising in PMSMs</h3>
+        <p class="pub-venue">IEA/AIE 2026 — International Conference on Industrial, Engineering & Applied AI &nbsp;·&nbsp; Kuala Lumpur, Malaysia &nbsp;·&nbsp; <span class="green" data-en="Accepted · Apr. 2026" data-fr="Accepté · Avr. 2026">Accepted · Apr. 2026</span></p>
+        <p class="pub-desc" data-en="Self-supervised pipeline for magnetic fault denoising and localization in Permanent Magnet Synchronous Machines (PMSMs). Combines FEM simulation (Pyleecan), Self2Self+ denoising and automatic segmentation to detect defective regions in magnetic flux maps (Br/Bt) without manual annotations. Case study: Tesla Model 3." data-fr="Pipeline self-supervisé pour le débruitage et la localisation de défauts magnétiques dans des machines synchrones à aimants permanents (PMSM). Combine simulation FEM (Pyleecan), débruitage Self2Self+ et segmentation automatique pour détecter des régions défectueuses dans les cartes de flux magnétique (Br/Bt) sans annotations manuelles. Cas d'étude : Tesla Model 3.">Self-supervised pipeline for magnetic fault denoising and localization in Permanent Magnet Synchronous Machines (PMSMs). Combines FEM simulation (Pyleecan), Self2Self+ denoising and automatic segmentation to detect defective regions in magnetic flux maps (Br/Bt) without manual annotations. Case study: Tesla Model 3.</p>
+        <div class="pub-topics"><span class="tag">Self-supervised learning</span><span class="tag">PMSMs</span><span class="tag">FEM Simulation</span><span class="tag">Fault Diagnosis</span><span class="tag">Industrial AI</span></div>
+        <a href="https://github.com/PRISCILLE7/Self2SelfPlus-MagneticFaultDiagnosis" target="_blank" class="project-link">Code GitHub ↗</a>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-header">
+          <div class="pub-badge workshop">Workshop</div>
+          <span class="pub-year accent">2025</span>
+        </div>
+        <h3 class="pub-title">Multi-Agent Simulation for Urban Waste Collection Optimization</h3>
+        <p class="pub-venue">AFIA Bulletin n°129 — French Association for Artificial Intelligence &nbsp;·&nbsp; Jul. 2025</p>
+        <p class="pub-desc" data-en="Multi-agent system for urban waste logistics optimization under real-world constraints and dynamic environments. Behavioral modeling of vehicles and their interactions with the urban environment using the GAMA platform." data-fr="Système multi-agents pour l'optimisation de la logistique de collecte urbaine sous contraintes réelles et environnements dynamiques. Modélisation des comportements de véhicules via la plateforme GAMA.">Multi-agent system for urban waste logistics optimization under real-world constraints and dynamic environments. Behavioral modeling of vehicles and their interactions with the urban environment using the GAMA platform.</p>
+        <div class="pub-topics"><span class="tag">Multi-Agent Systems</span><span class="tag">GAMA</span><span class="tag">Urban Logistics</span></div>
+        <a href="https://afia.asso.fr/wp-content/uploads/2025/09/129_jui25.pdf" target="_blank" class="project-link" data-en="Read paper ↗" data-fr="Lire le paper ↗">Read paper ↗</a>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-header">
+          <div class="pub-badge review" data-en="Critical review" data-fr="Analyse critique">Critical review</div>
+          <span class="pub-year">2025</span>
+        </div>
+        <h3 class="pub-title" data-en="Critical Review of Self2Seg — Self-supervised Segmentation & Denoising" data-fr="Analyse critique de Self2Seg — Segmentation & Débruitage auto-supervisé">Critical Review of Self2Seg — Self-supervised Segmentation & Denoising</h3>
+        <p class="pub-desc" data-en="Structured critical analysis of the Self2Seg paper, including implementation insights and future research directions. Written in LaTeX as part of LGI2A research." data-fr="Analyse critique structurée du paper Self2Seg, avec insights d'implémentation et perspectives d'extensions. Rédigé en LaTeX dans le cadre de la recherche au LGI2A.">Structured critical analysis of the Self2Seg paper, including implementation insights and future research directions. Written in LaTeX as part of LGI2A research.</p>
+        <div class="pub-topics"><span class="tag">Self-supervised</span><span class="tag">Segmentation</span><span class="tag">Denoising</span></div>
+        <a href="https://github.com/PRISCILLE7/Self2Seg-Analysis" target="_blank" class="project-link" data-en="View on GitHub ↗" data-fr="Voir sur GitHub ↗">View on GitHub ↗</a>
+      </div>
+    </div>
+
+    <h3 class="subsection-title" style="margin-top:2.5rem" data-en="Research infrastructure & tools" data-fr="Infrastructure & outils de recherche">Research infrastructure & tools</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Simulation · Electromagnetics · Dataset</span></div>
+        <h3 data-en="Pyleecan MultiDefect Simulation — Tesla Model 3 & Toyota Prius" data-fr="Pyleecan MultiDefect Simulation — Tesla Model 3 & Toyota Prius">Pyleecan MultiDefect Simulation — Tesla Model 3 & Toyota Prius</h3>
+        <p data-en="Multi-fault simulation of electric machines using Pyleecan/FEMM. Generates a structured dataset including flux, torque, harmonics and time series for ML research." data-fr="Simulation multi-défauts de machines électriques via Pyleecan/FEMM. Génère un dataset structuré incluant flux, couple, harmoniques et séries temporelles.">Multi-fault simulation of electric machines using Pyleecan/FEMM. Generates a structured dataset including flux, torque, harmonics and time series for ML research.</p>
+        <div class="tl-tags"><span class="tag">Pyleecan</span><span class="tag">FEMM</span><span class="tag">Dataset Gen.</span></div>
+        <a href="https://github.com/PRISCILLE7/Pyleecan-MultiDefect-Simulation" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+      <div class="project-card">
+        <div class="project-card-top"><span class="project-type">Tooling · Visualization · Pyleecan</span></div>
+        <h3 data-en="Pyleecan JSON Viewer — Advanced GUI" data-fr="Pyleecan JSON Viewer — GUI avancée">Pyleecan JSON Viewer — Advanced GUI</h3>
+        <p data-en="Advanced Python GUI for Pyleecan JSON validation, simulation analysis, and data export with interactive visualization tools." data-fr="Interface graphique Python avancée pour la validation de fichiers JSON Pyleecan, l'analyse de simulations et l'export de données.">Advanced Python GUI for Pyleecan JSON validation, simulation analysis, and data export with interactive visualization tools.</p>
+        <div class="tl-tags"><span class="tag">Python</span><span class="tag">GUI</span><span class="tag">Pyleecan</span></div>
+        <a href="https://github.com/PRISCILLE7/pyleecan-json-viewer" target="_blank" class="project-link">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title"><span class="mono accent">05.</span> <span data-en="Skills" data-fr="Compétences">Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3 class="skill-group-title">MLOps & Infrastructure</h3>
+        <div class="skill-list">
+          <span class="skill-item core">AWS SageMaker</span><span class="skill-item core">GCP / GCS</span>
+          <span class="skill-item core">Docker</span><span class="skill-item core">Kubernetes / GKE</span>
+          <span class="skill-item core">MLflow</span><span class="skill-item core">GitHub Actions / CI/CD</span>
+          <span class="skill-item">Azure ML</span><span class="skill-item">FastAPI</span>
+          <span class="skill-item">SLURM / HPC</span><span class="skill-item">REST API</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">Computer Vision & ML</h3>
+        <div class="skill-list">
+          <span class="skill-item core">YOLO v5/v8/v11</span><span class="skill-item core">PyTorch</span>
+          <span class="skill-item core">TensorFlow</span><span class="skill-item core">OpenCV</span>
+          <span class="skill-item core">Transfer Learning</span><span class="skill-item core">Self-Supervised Learning</span>
+          <span class="skill-item">Grad-CAM</span><span class="skill-item">Segmentation</span>
+          <span class="skill-item">OCR (Tesseract, EasyOCR)</span><span class="skill-item">SIFT</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">NLP & Generative AI</h3>
+        <div class="skill-list">
+          <span class="skill-item core">LangChain</span><span class="skill-item core">RAG</span>
+          <span class="skill-item core">Hugging Face</span><span class="skill-item core">GPT-4 / Mistral</span>
+          <span class="skill-item">Prompt Engineering</span><span class="skill-item">spaCy</span>
+          <span class="skill-item">NLTK</span><span class="skill-item">Word2Vec / Gensim</span>
+          <span class="skill-item">watsonx.ai</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title" data-en="Simulation & Research" data-fr="Simulation & Recherche">Simulation & Research</h3>
+        <div class="skill-list">
+          <span class="skill-item core">Pyleecan</span><span class="skill-item core">FEMM</span>
+          <span class="skill-item core">GAMA Platform</span><span class="skill-item core">Signal Analysis</span>
+          <span class="skill-item">Synthetic Data Gen.</span><span class="skill-item">FEM Simulation</span>
+          <span class="skill-item">Multi-Agent Systems</span><span class="skill-item">Unity / Blender</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title" data-en="Data & Annotation" data-fr="Data & Annotation">Data & Annotation</h3>
+        <div class="skill-list">
+          <span class="skill-item core">Python</span><span class="skill-item core">SQL / PostgreSQL</span>
+          <span class="skill-item core">Label Studio</span><span class="skill-item core">Hasty AI</span>
+          <span class="skill-item">Pandas / NumPy</span><span class="skill-item">AutoGluon</span>
+          <span class="skill-item">Streamlit</span><span class="skill-item">Matplotlib</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title" data-en="Languages & Context" data-fr="Langues & Contexte">Languages & Context</h3>
+        <div class="skill-list">
+          <span class="skill-item core" data-en="French — Native" data-fr="Français — Natif">French — Native</span>
+          <span class="skill-item core" data-en="English — Business fluent" data-fr="Anglais — Courant professionnel">English — Business fluent</span>
+          <span class="skill-item" data-en="International collaboration" data-fr="Collaboration internationale">International collaboration</span>
+          <span class="skill-item" data-en="Scientific writing" data-fr="Rédaction scientifique">Scientific writing</span>
+          <span class="skill-item">Remote work</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <h2 class="section-title"><span class="mono accent">06.</span> <span data-en="Education" data-fr="Formation">Education</span></h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-title" data-en="Master's in Intelligent & Multimedia Systems — Double Degree" data-fr="Master en Systèmes Intelligents et Multimédia — Double Diplôme">Master's in Intelligent & Multimedia Systems — Double Degree</h3>
+              <p class="tl-company">Institut Francophone International (VNU-IFI) · Hanoi, Vietnam<br>
+              <span style="font-size:11px;color:var(--text3)" data-en="in partnership with University of La Rochelle, France" data-fr="en partenariat avec l'Université de La Rochelle, France">in partnership with University of La Rochelle, France</span></p>
+            </div>
+            <span class="tl-date">2024 — 2025</span>
+          </div>
+          <div class="tl-tags"><span class="tag">Machine Learning</span><span class="tag">Computer Vision</span><span class="tag">NLP</span><span class="tag">Multimedia</span><span class="tag">Intelligent Systems</span></div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-title" data-en="Bachelor's in Computer Engineering (Bac+5)" data-fr="Licence en Informatique, option Génie Informatique (Bac+5)">Bachelor's in Computer Engineering (Bac+5)</h3>
+              <p class="tl-company" data-en="University of Kinshasa (UNIKIN) · DR Congo" data-fr="Université de Kinshasa (UNIKIN) · RD Congo">University of Kinshasa (UNIKIN) · DR Congo</p>
+            </div>
+            <span class="tl-date">2016 — 2022</span>
+          </div>
+          <p class="tl-intro" style="color:var(--accent)" data-en="Distinction" data-fr="Mention : Distinction">Distinction</p>
+          <div class="tl-tags"><span class="tag">Computer Science</span><span class="tag">Algorithms</span><span class="tag">Virtualization</span><span class="tag">Cloud Computing</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subsection-title" style="margin-top:2.5rem" data-en="Certifications & Ongoing training" data-fr="Certifications & Formations continues">Certifications & Ongoing training</h3>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <span class="cert-issuer">Duke University / Coursera</span>
+        <h4>MLOps | Machine Learning Operations Specialization</h4>
+        <p>AWS SageMaker · Azure ML · MLflow · GitHub Actions · CI/CD</p>
+        <span class="cert-date" data-en="2026 — ongoing" data-fr="2026 — en cours">2026 — ongoing</span>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer">IBM / Coursera</span>
+        <h4>IBM Generative AI Engineering — Professional Certificate</h4>
+        <p>LLMs · LangChain · RAG · Prompt Engineering · Hugging Face · watsonx.ai</p>
+        <span class="cert-date">2025</span>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer">Udemy</span>
+        <h4>YOLOv8 Object Detection for Number Plate Recognition</h4>
+        <p>YOLO · Computer Vision · OCR · Object Detection</p>
+        <span class="cert-date">Oct. 2024</span>
+      </div>
+      <div class="cert-card">
+        <span class="cert-issuer">VMware IT Academy</span>
+        <h4 data-en="Introduction to Virtualization & Cloud Computing" data-fr="Introduction à la Virtualisation & Cloud Computing">Introduction to Virtualization & Cloud Computing</h4>
+        <p>VMware vSphere/ESXi · Cloud Computing</p>
+        <span class="cert-date">2022</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title"><span class="mono accent">07.</span> Contact</h2>
+    <div class="contact-inner">
+      <div class="contact-text">
+        <p data-en="I am open to discussions about <strong>ML Engineer / MLOps positions</strong>, <strong>industrial PhDs</strong> (in collaboration with companies and research labs), or collaborations in <strong>applied industrial AI research</strong>." data-fr="Je suis ouverte à des discussions sur des <strong>postes ML Engineer / MLOps</strong>, des <strong>thèses industrielles</strong> (PhD en collaboration avec des entreprises et laboratoires), ou des collaborations en <strong>recherche appliquée en IA industrielle</strong>.">I am open to discussions about <strong>ML Engineer / MLOps positions</strong>, <strong>industrial PhDs</strong> (in collaboration with companies and research labs), or collaborations in <strong>applied industrial AI research</strong>.</p>
+        <p data-en="Available immediately — Paris, Bordeaux, or remote depending on agreement." data-fr="Disponible dès que possible — Paris, Bordeaux, ou remote selon accord.">Available immediately — Paris, Bordeaux, or remote depending on agreement.</p>
+        <div class="contact-note">
+          <span class="mono accent">&gt;</span> <span data-en="Based in Hanoi, Vietnam · Congolese national · Ready to relocate to France" data-fr="Basée à Hanoï, Vietnam · Ressortissante congolaise · Prête à se relocaliser en France">Based in Hanoi, Vietnam · Congolese national · Ready to relocate to France</span>
+        </div>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:priscille.e.ebwala@gmail.com" class="contact-card">
+          <div class="contact-icon">✉</div>
+          <div><span class="contact-label">Email</span><span class="contact-val">priscille.e.ebwala@gmail.com</span></div>
+        </a>
+        <a href="https://github.com/PRISCILLE7" target="_blank" class="contact-card">
+          <div class="contact-icon">⌥</div>
+          <div><span class="contact-label">GitHub</span><span class="contact-val">github.com/PRISCILLE7</span></div>
+        </a>
+        <a href="https://linkedin.com/in/priscille-ebwala" target="_blank" class="contact-card">
+          <div class="contact-icon">in</div>
+          <div><span class="contact-label">LinkedIn</span><span class="contact-val">linkedin.com/in/priscille-ebwala</span></div>
+        </a>
+        <a href="https://orcid.org/0009-0008-1342-2495" target="_blank" class="contact-card">
+          <div class="contact-icon">○</div>
+          <div><span class="contact-label">ORCID</span><span class="contact-val">0009-0008-1342-2495</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Priscille E. Ebwala &nbsp;·&nbsp; <span class="mono">AI/ML & Research Engineer</span> &nbsp;·&nbsp; <span class="accent">2026</span> &nbsp;·&nbsp; <a href="https://github.com/PRISCILLE7" target="_blank">github.com/PRISCILLE7</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
