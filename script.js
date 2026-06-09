@@ -4,7 +4,7 @@ let currentLang = 'en';
 function toggleLang() {
   currentLang = currentLang === 'en' ? 'fr' : 'en';
   document.documentElement.lang = currentLang;
-  document.getElementById('langBtn').textContent = currentLang === 'en' ? 'FR' : 'EN';
+  document.getElementById('langBtn').textContent = currentLang === 'en' ? 'EN' : 'FR';
   document.querySelectorAll('[data-en]').forEach(el => {
     const val = el.getAttribute('data-' + currentLang);
     if (val) el.innerHTML = val;
