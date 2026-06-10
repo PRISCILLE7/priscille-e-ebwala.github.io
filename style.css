@@ -53,37 +53,42 @@ section{padding:6rem 0;background:var(--bg)}
 .section-title .mono.accent{font-family:var(--mono);font-size:.78rem;opacity:.7;letter-spacing:.08em}
 .subsection-title{font-size:1.05rem;font-weight:600;margin-bottom:1.25rem;color:var(--text2)}
 
-/* HERO — split screen */
-#hero{position:relative;min-height:90vh;display:flex;overflow:hidden;background:var(--bg)}
+/* HERO — Charvi-inspired centered + animated ring (unique touch) */
+#hero{position:relative;min-height:88vh;display:flex;flex-direction:column;align-items:center;overflow:hidden;background:var(--bg);padding:0}
 #hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,#7c3aed,#a855f7,#06b6d4);z-index:10}
-/* Dot texture fills the left text area */
-.hero-grid-bg{display:block;position:absolute;top:0;left:0;width:65%;height:100%;pointer-events:none;z-index:1;background-image:radial-gradient(circle,rgba(124,58,237,.09) 1px,transparent 1px);background-size:32px 32px;-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.4) 0%,rgba(0,0,0,0) 72%);mask-image:linear-gradient(to bottom,rgba(0,0,0,.4) 0%,rgba(0,0,0,0) 72%)}
-/* Photo panel: fills right half entirely */
-.hero-photo-panel{position:absolute;right:0;top:0;width:44%;height:100%;overflow:hidden}
-.hero-photo-img{width:100%;height:100%;object-fit:cover;object-position:center 12%}
-/* Left gradient blends photo into white bg — name bleeds over this */
-.hero-photo-panel::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,transparent 32%);z-index:1;pointer-events:none}
-/* Text panel: left side, all content at bottom */
-.hero-text-panel{position:relative;z-index:2;width:68%;min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;padding:5.5rem 4rem 4.5rem}
-.hero-eyebrow{font-family:var(--mono);font-size:.72rem;color:var(--text2);letter-spacing:.04em;margin-bottom:1.5rem;line-height:1.6}
-/* Name bleeds across the photo divide — editorial trick */
-.hero-name{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,8.2vw,8.2rem);font-weight:700;line-height:.88;letter-spacing:-.04em;margin-bottom:1.5rem;color:var(--text);width:150%;max-width:none;white-space:nowrap}
-.hero-first{display:block;font-weight:400;font-style:italic}
-.hero-last{display:block;background:linear-gradient(120deg,#7c3aed 0%,#06b6d4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* Subtle dot grid, full hero */
+.hero-grid-bg{display:block;position:absolute;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(124,58,237,.08) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 100%)}
+/* Center block */
+.hero-center{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:5.5rem 2rem 3rem;max-width:720px;width:100%}
+/* Animated gradient ring — THE unique touch */
+.hero-ring-wrap{width:164px;height:164px;border-radius:50%;padding:4px;background:conic-gradient(from 0deg,#7c3aed,#a855f7,#06b6d4,#a855f7,#7c3aed);animation:ring-spin 5s linear infinite;margin-bottom:2rem;flex-shrink:0}
+.hero-photo-inner{width:100%;height:100%;border-radius:50%;overflow:hidden;padding:3px;background:var(--bg);animation:ring-spin 5s linear infinite reverse}
+.hero-photo-img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 10%;display:block}
+@keyframes ring-spin{to{transform:rotate(360deg)}}
+/* Name + greeting */
+.hero-greeting{font-family:var(--mono);font-size:.82rem;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5.5vw,4.8rem);font-weight:700;line-height:1.05;letter-spacing:-.025em;color:var(--text);margin-bottom:1rem}
 .name-gradient{background:linear-gradient(120deg,#7c3aed 0%,#06b6d4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-desc{font-size:.9rem;color:var(--text2);max-width:480px;line-height:1.8;margin-bottom:2rem}
-.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
-.btn-primary{background:var(--accent);color:#fff;font-weight:600;font-size:.83rem;padding:10px 22px;border-radius:var(--r);transition:opacity .2s,transform .2s;display:inline-block}
-.btn-primary:hover{opacity:.88;transform:translateY(-1px);text-decoration:none}
-.btn-secondary{background:transparent;color:var(--text);font-weight:500;font-size:.83rem;padding:10px 22px;border-radius:var(--r);border:1px solid var(--border-h);transition:background .2s,transform .2s;display:inline-block}
-.btn-secondary:hover{background:var(--bg3);transform:translateY(-1px);text-decoration:none}
-.btn-ghost{background:transparent;color:var(--text2);font-weight:500;font-size:.83rem;padding:10px 22px;border-radius:var(--r);border:1px solid var(--border);transition:background .2s,color .2s;display:inline-block}
+.hero-tagline{font-family:var(--mono);font-size:.75rem;color:var(--text2);letter-spacing:.03em;line-height:1.8;margin-bottom:1.25rem}
+.hero-desc{font-size:.95rem;color:var(--text2);max-width:560px;line-height:1.85;margin-bottom:2rem}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-bottom:2.5rem}
+.btn-primary{background:var(--accent);color:#fff;font-weight:600;font-size:.83rem;padding:11px 24px;border-radius:50px;transition:opacity .2s,transform .2s,box-shadow .2s;display:inline-block;box-shadow:0 4px 16px rgba(124,58,237,.25)}
+.btn-primary:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,.35);text-decoration:none}
+.btn-secondary{background:transparent;color:var(--text);font-weight:500;font-size:.83rem;padding:11px 24px;border-radius:50px;border:1.5px solid var(--border-h);transition:background .2s,transform .2s;display:inline-block}
+.btn-secondary:hover{background:rgba(124,58,237,.06);transform:translateY(-2px);text-decoration:none}
+.btn-ghost{background:transparent;color:var(--text2);font-weight:500;font-size:.83rem;padding:11px 24px;border-radius:50px;border:1.5px solid var(--border);transition:background .2s,color .2s;display:inline-block}
 .btn-ghost:hover{background:var(--bg3);color:var(--text);text-decoration:none}
-.hero-stats{display:flex;gap:2rem;align-items:center;flex-wrap:wrap}
-.stat{display:flex;align-items:baseline;gap:.35rem;background:none;border:none;border-radius:0;padding:0;box-shadow:none}
+.hero-stats{display:flex;gap:2.5rem;align-items:center;justify-content:center;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;border-radius:0;padding:0;box-shadow:none}
 .stat:hover{transform:none;box-shadow:none}
-.stat-n{font-family:var(--mono);font-size:1.1rem;font-weight:700;color:var(--accent);line-height:1}
-.stat-l{font-size:.63rem;color:var(--text3);text-transform:uppercase;letter-spacing:.08em}
+.stat-n{font-family:var(--mono);font-size:1.3rem;font-weight:700;color:var(--accent);line-height:1}
+.stat-l{font-size:.62rem;color:var(--text3);text-transform:uppercase;letter-spacing:.08em}
+/* Personal photo bento strip — what Charvi has but richer */
+.hero-bento-row{position:relative;z-index:2;display:flex;gap:10px;align-items:center;justify-content:center;padding:0 2rem 3rem;flex-wrap:wrap;width:100%;max-width:900px}
+.hero-bento-photo{width:120px;height:150px;border-radius:80px 80px 20px 20px;overflow:hidden;flex-shrink:0;box-shadow:0 8px 24px rgba(0,0,0,.10)}
+.hero-bento-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.hero-bento-chip{font-family:var(--mono);font-size:.68rem;color:var(--text2);background:var(--bg2);border:1px solid var(--border);padding:8px 14px;border-radius:50px;white-space:nowrap}
+.hero-bento-chip--accent{color:var(--accent);border-color:var(--border-h);background:rgba(124,58,237,.04)}
 
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 310px;gap:3.5rem;align-items:start}
@@ -183,15 +188,8 @@ section{padding:6rem 0;background:var(--bg)}
 footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-size:.78rem;color:var(--text3)}
 
 /* RESPONSIVE */
-@media(max-width:1000px){
-  .hero-photo-panel{width:38%}
-  .hero-text-panel{width:72%;padding:5rem 2.5rem 4rem}
-  .hero-name{width:138%}
-}
 @media(max-width:900px){
-  .hero-photo-panel{width:32%}
-  .hero-text-panel{width:80%;padding:5rem 2rem 3.5rem}
-  .hero-name{width:125%}
+  .hero-bento-photo{width:100px;height:125px}
   .about-grid{grid-template-columns:1fr;gap:2rem}
   .about-photos{grid-template-rows:220px 140px}
   .contact-inner{grid-template-columns:1fr;gap:2rem}
@@ -199,10 +197,12 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
 @media(max-width:768px){
   .nav-links{display:none}
   .nav-toggle{display:block}
-  .hero-photo-panel{display:none}
-  .hero-text-panel{width:100%;padding:4.5rem 1.5rem 3rem;min-height:85vh}
-  .hero-name{white-space:normal;width:100%;font-size:clamp(3rem,12vw,5.5rem)}
-  .hero-stats{gap:1.5rem;flex-wrap:wrap}
+  .hero-center{padding:5rem 1.5rem 2.5rem}
+  .hero-ring-wrap{width:140px;height:140px}
+  .hero-name{font-size:clamp(2.2rem,9vw,3.5rem)}
+  .hero-stats{gap:1.5rem}
+  .hero-bento-row{gap:8px}
+  .hero-bento-chip{font-size:.62rem;padding:6px 11px}
   section{padding:4rem 0}
 }
 @media(prefers-reduced-motion:reduce){
